@@ -1,0 +1,38 @@
+{
+  "name": "create-eiinu",
+  "version": "0.0.2",
+  "type": "module",
+  "license": "MIT",
+  "author": "Eiinu",
+  "bin": {
+    "create-eiinu": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template-*",
+    "dist"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "dev": "unbuild && node index.js",
+    "build": "unbuild",
+    "publish": "unbuild && npm publish ."
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eiinu/create-eiinu.git"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.2",
+    "@types/minimist": "^1.2.2",
+    "@types/prompts": "^2.4.3",
+    "cross-spawn": "^7.0.3",
+    "kolorist": "^1.7.0",
+    "prompts": "^2.4.2",
+    "tsc": "^2.0.4",
+    "unbuild": "^1.1.2"
+  }
+}
