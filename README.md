@@ -2,7 +2,13 @@
 
 FE project templates for personal use.
 
-TODO:
+### How to use
+
+```bash
+pnpm create eiinu
+```
+
+### TODO
 - h5
   - vue
     - vite
@@ -23,5 +29,5 @@ TODO:
     - [ ] webpack
 
 
-Some codes refer to 
+> Some codes refer to 
 [vitejs/create-vite](https://github.com/vitejs/vite/tree/main/packages/create-vite).
