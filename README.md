@@ -12,7 +12,7 @@ TODO:
       - [ ] nutui4
       - [ ] nutui3
   - react
-    - [ ] vite
+    - [x] vite
     - [ ] cra
 - taro
   - vue

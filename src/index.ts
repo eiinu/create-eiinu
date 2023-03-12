@@ -35,7 +35,7 @@ const init = async () => {
         if (platform === 'h5') {
           return [
             { title: 'Vue', value: 'vue' },
-            { title: 'React', value: 'react', disabled: true }
+            { title: 'React', value: 'react' }
           ]
         } else if (platform === 'taro') {
           return [
@@ -52,7 +52,7 @@ const init = async () => {
         return framework === 'vue' ? 'select' : null
       },
       name: 'nutui',
-      message: 'Pick the version of nutui. 选择 NutUI 版本',
+      message: 'Pick the version of nutui.',
       choices: (framework) => {
         if (framework === 'vue') {
           return [
@@ -67,7 +67,12 @@ const init = async () => {
   ]);
   const { packageName, platform, framework, nutui } = response
   const tool = 'vite'
-  const target = `template-${platform}-${framework}-${tool}-${nutui}`
+  let target = ''
+  if (framework === 'vue') {
+    target = `template-${platform}-${framework}-${tool}-${nutui}`
+  } else {
+    target = `template-${platform}-${framework}-${tool}-nutui`
+  }
   let targetDir = packageName || defaultTargetDir
   const root = path.join(cwd, targetDir)
 
