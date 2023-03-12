@@ -39,7 +39,7 @@ const init = async () => {
           ]
         } else if (platform === 'taro') {
           return [
-            { title: 'Vue', value: 'vue', disabled: true },
+            { title: 'Vue', value: 'vue' },
             { title: 'React', value: 'react', disabled: true }
           ]
         }
@@ -66,8 +66,13 @@ const init = async () => {
     },
   ]);
   const { packageName, platform, framework, nutui } = response
-  const tool = 'vite'
+  let tool = ''
   let target = ''
+  if (platform === 'h5') {
+    tool = 'vite'
+  } else {
+    tool = 'webpack'
+  }
   if (framework === 'vue') {
     target = `template-${platform}-${framework}-${tool}-${nutui}`
   } else {
