@@ -1,6 +1,6 @@
 {
   "name": "create-eiinu",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "type": "module",
   "license": "MIT",
   "author": "Eiinu",
@@ -9,7 +9,7 @@
   },
   "files": [
     "index.js",
-    "template-*",
+    "template-*/**",
     "dist"
   ],
   "main": "index.js",
