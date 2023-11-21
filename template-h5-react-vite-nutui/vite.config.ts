@@ -1,28 +1,23 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import { createStyleImportPlugin } from "vite-plugin-style-import";
+// vite.config.js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+import vitePluginImp from 'vite-plugin-imp'
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  css: {
-    preprocessorOptions: {
-      scss: {
-        // 配置 nutui 全局 scss 变量
-        additionalData: `@import "@nutui/nutui-react/dist/styles/variables.scss";`,
-      },
-    },
-  },
   plugins: [
     react(),
-    createStyleImportPlugin({
-      libs: [
+    vitePluginImp({
+      libList: [
         {
-          libraryName: "@nutui/nutui-react",
-          libraryNameChangeCase: "pascalCase",
-          resolveStyle: (name) => {
-            return `@nutui/nutui-react/dist/esm/${name}/style`
+          libName: '@nutui/nutui-react',
+          style: (name) => {
+            return `@nutui/nutui-react/dist/esm/${name}/style/css`
           },
-        },
-      ],
-    }),
+          replaceOldImport: false,
+          camel2DashComponentName: false,
+        }
+      ]
+    })
   ],
-});
+})
