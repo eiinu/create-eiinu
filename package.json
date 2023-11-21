@@ -1,6 +1,6 @@
 {
   "name": "create-eiinu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "license": "MIT",
   "author": "Eiinu",
@@ -26,13 +26,13 @@
     "url": "git+https://github.com/eiinu/create-eiinu.git"
   },
   "devDependencies": {
-    "@types/cross-spawn": "^6.0.2",
-    "@types/minimist": "^1.2.2",
-    "@types/prompts": "^2.4.3",
+    "@types/cross-spawn": "^6.0.6",
+    "@types/minimist": "^1.2.5",
+    "@types/prompts": "^2.4.9",
     "cross-spawn": "^7.0.3",
-    "kolorist": "^1.7.0",
+    "kolorist": "^1.8.0",
     "prompts": "^2.4.2",
     "tsc": "^2.0.4",
-    "unbuild": "^1.1.2"
+    "unbuild": "^2.0.0"
   }
 }
